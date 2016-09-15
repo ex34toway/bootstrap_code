@@ -1,0 +1,20 @@
+{
+  "name": "bootstrap_code",
+  "authors": [
+    "liliang <649743135@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "1.4.0"
+  }
+}
