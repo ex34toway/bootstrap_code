@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+  sourcemap = require('gulp-sourcemaps'),
   less = require('gulp-less'),
   notify = require('gulp-notify'),
   plumber = require('gulp-plumber'),
@@ -17,20 +18,21 @@ gulp.task('webserver', function() {
 gulp.task('less', function() {
   gulp.src(
    [//'./less/bootstrap/bootstrap.less',
-    './less/base/base.less'//,
-    //'./less/home/home.less'
+    './public/less/base/base.less',
+    './public/less/bootstrap/bootstrap.less'
     ])
-    //.pipe(sourcemaps.init())
+    .pipe(sourcemap.init())
     .pipe(less())
     //.pipe(cssmin())
     .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
-    //.pipe(sourcemaps.write())
+    .pipe(sourcemap.write('./maps'))
     .pipe(gulp.dest('./public/css'));
 });
 
 // 监听任务
 gulp.task('watch', function () {
-  gulp.watch('./less/base/*.less', ['less']);
+  gulp.watch('./public/less/base/*.less', ['less']);
+  gulp.watch('./public/less/bootstrap/*.less', ['less']);
   gulp.watch('*.html', ['html']);
 });
 

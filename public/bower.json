@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap_code",
+  "authors": [
+    "liliang <649743135@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.2.0",
+    "less": "less.js#^2.7.1"
+  }
+}
