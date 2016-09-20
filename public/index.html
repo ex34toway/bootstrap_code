@@ -2,59 +2,97 @@
 <html>
 <head>
   <title>Home page</title>
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="css/bootstrap.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" type="text/css" href="css/base.css">
   <style type="text/css">
-    body {
-      padding-top: 60px;
+    .featurette-divider {
+      margin: 80px 0;
     }
   </style>
 </head>
 <body>
-<div class="topbar" role="navigation">
-  <div class="topbar-inner">
-    <div class="container-fluid">
-      <a class="brand" href="#">Project name</a>
-      <ul class="nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <p class="pull-right">Logged in as <a href="#">username</a></p>
-    </div>
-  </div>
-</div>
-<div class="container-fluid">
-  <div class="sidebar">
-    <div class="well">
-      <h5>Sidebar</h5>
-      <ul>
-        <li>
-          <a href="#">Link</a>
-        </li>
-        <li>
-          <a href="#">Link</a>
-        </li>
-        <li>
-          <a href="#">Link</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="content">
-    <div class="hero-unit">
-      <h1>Hello world!</h1>
-      <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-      <p><a class="btn primary large">Learn more &raquo;</a></p>
-    </div>
-    <div class="row">
-      <div class="span6">
-        <h2>Heading</h2>
-        <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-        <p><a class="btn" href="#">View details &raquo;</a></p>
+  <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project name</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../navbar/">Default</a></li>
+          <li class="active"><a href="./">Static top</a></li>
+          <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p></div>
+      <div class="col-md-4"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p></div>
+      <div class="col-md-4"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p></div>
+    </div>
+    <div class="row">
+      <p>排序前</p>
+      <div class="col-md-4" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+        我在左边
+      </div>
+      <div class="col-md-8" style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+        我在右边
+      </div>
+    </div><br/>
+    <div class="row">
+      <p>排序后</p>
+      <div class="col-md-4 col-md-push-8"
+           style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444,
+         inset -1px 1px 1px #444;">
+        我在左边
+      </div>
+      <div class="col-md-8 col-md-pull-4"
+           style="background-color: #dedef8;
+         box-shadow: inset 1px -1px 1px #444,
+         inset -1px 1px 1px #444;">
+        我在右边
+      </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+    <!-- footer -->
+    <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </div>
 </body>
 </html>

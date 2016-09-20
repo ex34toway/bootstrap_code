@@ -19,7 +19,7 @@ gulp.task('less', function() {
   gulp.src(
    [//'./less/bootstrap/bootstrap.less',
     './public/less/base/base.less',
-    './public/less/bootstrap/bootstrap.less'
+     './public/less/bootstrap-3.2.0/bootstrap.less'
     ])
     .pipe(sourcemap.init())
     .pipe(less())
@@ -32,7 +32,7 @@ gulp.task('less', function() {
 // 监听任务
 gulp.task('watch', function () {
   gulp.watch('./public/less/base/*.less', ['less']);
-  gulp.watch('./public/less/bootstrap/*.less', ['less']);
+  gulp.watch('./public/less/bootstrap-3.2.0/*.less', ['less']);
   gulp.watch('*.html', ['html']);
 });
 
