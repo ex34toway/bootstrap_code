@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "bootstrap": "3.2.0",
-    "less": "less.js#^2.7.1"
+    "less": "less.js#^2.7.1",
+    "underscore": "^1.8.3"
   }
 }

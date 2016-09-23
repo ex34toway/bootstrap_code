@@ -5,6 +5,9 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   webserver = require('gulp-webserver'); // 本地服务器
 
+var LessAutoprefix = require('less-plugin-autoprefix');
+var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
+
 // webserver
 gulp.task('webserver', function() {
   gulp.src( './public/' ) // 服务器目录（./代表根目录）
@@ -19,10 +22,13 @@ gulp.task('less', function() {
   gulp.src(
    [//'./less/bootstrap/bootstrap.less',
     './public/less/base/base.less',
+
      './public/less/bootstrap-3.2.0/bootstrap.less'
     ])
     .pipe(sourcemap.init())
-    .pipe(less())
+    .pipe(less({
+      plugins: [autoprefix]
+    }))
     //.pipe(cssmin())
     .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
     .pipe(sourcemap.write('./maps'))

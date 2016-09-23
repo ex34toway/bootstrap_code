@@ -13,6 +13,17 @@
     .featurette-divider {
       margin: 80px 0;
     }
+    .color-label {
+      background-color: #dedef8;
+      box-shadow: inset 1px -1px 1px #444,
+      inset -1px 1px 1px #444;
+    }
+    .test {
+        border: 5px solid transparent;
+    }
+    .test > p + p {
+        margin-top: 5px;
+    }
   </style>
 </head>
 <body>
@@ -54,6 +65,7 @@
     </div>
   </div>
   <div class="container">
+    <h1>我是标题1 h1. <small>我是副标题1 h1</small></h1>
     <div class="row">
       <div class="col-md-4"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p></div>
       <div class="col-md-4"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p></div>
@@ -61,31 +73,178 @@
     </div>
     <div class="row">
       <p>排序前</p>
-      <div class="col-md-4" style="background-color: #dedef8;
-         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+      <div class="col-md-4 color-label">
         我在左边
       </div>
-      <div class="col-md-8" style="background-color: #dedef8;
-         box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+      <div class="col-md-8 color-label">
         我在右边
       </div>
     </div><br/>
     <div class="row">
       <p>排序后</p>
-      <div class="col-md-4 col-md-push-8"
-           style="background-color: #dedef8;
-         box-shadow: inset 1px -1px 1px #444,
-         inset -1px 1px 1px #444;">
+      <div class="col-md-4 col-md-push-8 color-label">
         我在左边
       </div>
-      <div class="col-md-8 col-md-pull-4"
-           style="background-color: #dedef8;
-         box-shadow: inset 1px -1px 1px #444,
-         inset -1px 1px 1px #444;">
+      <div class="col-md-8 col-md-pull-4 color-label">
         我在右边
       </div>
     </div>
+    <!-- 列偏移 col-xx-offset -->
+    <div class="row">
+      <div class="col-md-4 color-label text-center">.col-md-4</div>
+      <div class="col-md-4 col-md-offset-4 color-label text-center">.col-md-4 .col-md-offset-4</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-6 color-label">
+            Level 2 .col-md-6
+          </div>
+          <div class="col-md-6 color-label">
+            Level 2 .col-md-6
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 列排序 col-xx-push -->
+    <div class="row">
+      <div class="col-md-4 color-label">
+        我在左边
+      </div>
+      <div class="col-md-8 color-label">
+        我在右边
+      </div>
+    </div>
+    <div class="clearfix visible-xs"></div>
+    <div class="row">
+      <div class="col-md-4 col-md-push-8 color-label"> <!-- 向右推8个列 -->
+        我在右边
+      </div>
+      <div class="col-md-8 col-md-pull-4 color-label"> <!-- 向左拉4个列 -->
+        我在左边
+      </div>
+    </div>
+    <!-- 只用了float:left;left;right;三个属性就实现以上效果 -->
 
+    <div class="row">
+      <div class="test">
+          <p>PPPPPP</p>
+          <p>PPPPPP</p>
+          <p>PPPPPP</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div><!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div><!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div><!-- /.col-sm-4 -->
+    </div>
+    <div class="progress progress-striped active">
+      <div class="progress-bar" style="width: 45%;">
+        <span class="">45% Complete</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="alert-warning">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>警告!</strong>你输入的不是合法字符
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <p><span class="lead">我</span>是一名中国人</p>
+        <p class="text-left">text-left</p>
+        <p class="text-right">text-right</p>
+        <p class="text-center">text-center</p>
+        <p class="text-justify">text-justify</p>
+      </div>
+      <div class="col-md-8">
+        <span title="Hyper Text Marker Language" class="initialism">HTML</span>
+        <blockquote class="pull-right">
+          <p>吾日三省吾身</p>
+          <small>出自 <cite title="论语 述而">论语</cite></small>
+        </blockquote>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <form class="form-horizontal">
+            <div class="form-group has-feedback">
+                <!--
+              <label class="control-label" for="inputWarning">输入长度不够!</label>
+              -->
+              <label class="control-label col-md-4">输入框:</label>
+              <div class="col-md-8">
+                  <input type="datetime" class="input-sm form-inline form-control" placeholder="请输入内容">
+                  <span class="glyphicon glyphicon-ok form-control-feedback sr-only"></span>
+              </div>
+            </div>
+            <div class="form-group checkbox col-md-push-8" style="width: 70%;">
+                <input type="checkbox"/>选择
+            </div>
+        </form>
+      </div>
+    </div>
+      <div class="row">
+          <div class="col-md-4">
+              <a href="index.html" type="button" class="btn btn-block btn-success">新浪微博</a>
+          </div>
+          <div class="col-md-8">
+              <a href="index.html" type="button" class="btn btn-block btn-primary">百度一下</a>
+          </div>
+      </div>
 
     <hr class="featurette-divider">
     <!-- footer -->
@@ -94,5 +253,11 @@
       <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
     </footer>
   </div>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    (function(){
+    })();
+  </script>
 </body>
 </html>
